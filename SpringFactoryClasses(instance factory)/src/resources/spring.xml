@@ -1,0 +1,11 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springfranework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<!-- Using first bean, we will create an instance of CarFactory. which is used for calling its getInstance() method
+ -->
+	<bean id="cf" class="beans.CarFactory">
+		<property name="carName" value="beans.Audi"></property>
+	</bean>	
+	<bean id="c" factory-bean="cf" factory-method="getInstance" />
+	<!--Car c=cf.getInstance() -->
+</beans>

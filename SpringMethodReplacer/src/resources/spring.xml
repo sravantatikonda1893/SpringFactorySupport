@@ -1,0 +1,14 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springfranework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<!-- By this, a method in Bank class will be replaced named "calInterest" and replacer reference will be used for
+calling the newly implemented method identifies by using the overriden method of the interface -->
+
+<!-- Internally, IOC container generates a BankProxy class extending Bank which has the old method
+and will override it -->
+<bean id="b" class="beans.Bank">
+<replaced-method name="calInterest" replacer="nci"/>
+</bean>
+<bean id="nci" class="beans.NewCalInterest"/>
+
+</beans>

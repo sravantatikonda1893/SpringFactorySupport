@@ -1,0 +1,8 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springfranework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<!-- using setter injection dependency will be injected in CarFactory class and returned to cf variable -->
+	<bean id="cf" class="beans.CarFactory">
+		<property name="carName" value="beans.Audi" />
+	</bean>
+</beans>
